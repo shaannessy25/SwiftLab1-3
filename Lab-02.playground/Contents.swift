@@ -36,18 +36,18 @@ qruple   // (Int, Int, Int, Int)
 
 // 1. Login holds name and password both type String
 
-
+let login: (String, String) = ("Username", "password")
 
 // 2. Vector holds two nunmbers: 1.56, 3.45
 
+var vector: (Double, Double) = (1.56, 3.45)
 
 
 // 3. Profile holds name, age, shoesize
-
-
+var profile: (String, Int, Double)
 
 // 3. Address holds street address, city, state, and zip code
-
+var address: (String, String, String, Int)
 
 
 
@@ -64,9 +64,9 @@ let coords: (Double, Double) = (37.754871, -122.498789)
 // practice to also add the type to prevent mistakes.
 // Explicitly type each of the variables below:
 
-let name = ("Frango", "Martini")
-let pizza = ("Peperoni", "Large", 21.99)
-let damage = ("heat", 120000)
+let name: (String, String) = ("Frango", "Martini")
+let pizza: (String, String, Double) = ("Peperoni", "Large", 21.99)
+let damage: (String, Int) = ("heat", 120000)
 
 
 
@@ -79,7 +79,8 @@ print(name.1) // Martini
 
 // Challenge:
 // Print all of the values from the pizza and damage
-
+print(pizza.2)
+print(damage.1)
 
 
 // Tuples are great but it can sometimes be confusing to identify
@@ -99,19 +100,18 @@ print(track.time) // 1.57
 // each value. Also assign a valid value for each variable.
 
 // 1. location: latitude: 37.754871, longitude: -122.498789
-
-
+var location: (latitude: Double, longitude: Double) = (37.754871, -122.498789)
 
 // 2. doughnut: type: cake, flavor: chocolate, has sprinkles: false
-
+var doughnut: (type: String, flavor: String, sprinkles: Bool) = ("cake", "chocolate", false)
 
 
 // 3. shoe: model: Skate, color: red, size: 9.5
-
+var shoe: (model: String, color: String, size: Double) = ("Skate", "red", 9.5)
 
 
 // Challenge:
 // Print each value from the three tuples you defined above:
-
+print(location, doughnut, shoe)
 
 
