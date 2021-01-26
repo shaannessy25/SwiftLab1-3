@@ -64,36 +64,46 @@ print("The number Pi is roughly \(22.0/7.0)")
 // Write the following functions:
 
 // 1. Write a function that prints your name using print().
-
-
-
+func namePrint(name: String) {
+    return print("Hello, \(name)")
+}
 // 2. Call/invoke the function you just wrote
 
+namePrint(name: "Shaan Hurley")
 
 
 // 3. Write a function that takes a String as a parameter.
 //   Your function should print the string with "***" before and
 //   after the input string.
-
+func stringPrint(name: String) {
+    return print("***** /(name) ****")
+}
 
 
 // 4. Write a function that calculates the area of a rectangle.
 //   It should take the width and height as parameters of type Int
 //   and return an Int
 
-
+func area(width: Double, height: Double) -> Double {
+    return width * height
+}
 
 // 5. Call your area function with the values 25 and 35 and print
 //   returned results.
 
-
+var test = area(width:25, height:35)
+print(test)
 
 // 6. Write a function that calculates the area of a circle. It
 //   take radius, an Int, and return a Double. The area of a
 //   is roughly 3.14 * radius * radius.
 //   You'll have to convert the radius to Double to do the math!
 
+func areaCircle (radius: Double) -> Double {
+    return 3.14159 * radius * radius
+}
 
+print(areaCircle(radius: 34))
 
 
 
@@ -183,7 +193,11 @@ greet(user: "Frango", withPrefix: "Mr.")
 //    length of 48 and a width of 96 and a cost of 0.33 per square foot.
 //    The function should return: 4 * 8 * 0.10 = 10.56
 
+func areaCost(length: Double, width: Double, costPerSquare: Double) -> Double{
+    return length * width * costPerSquare
+}
 
+areaCost(length: 4.5, width: 3.4, costPerSquare: 5.55)
 
 // 3. Write a function that orders a pizza. It should take the type of
 //    pie as a string (cheese, pepperoni, etc.), the size of the pie
@@ -193,6 +207,15 @@ greet(user: "Frango", withPrefix: "Mr.")
 //    Calculate the cost as the area times 0.05 + 0.03 * number of toppings
 //    For example a 5" radius pie with 3 toppings:
 //    5 * 5 * 3.14 * (0.05 + 0.03 * 3) = 10.99
+
+
+func makePizza(size: Int, toppings: Int, type: String) -> (Double, String) {
+    var price = size * size * 3.14 * (0.05 + 0.03 * toppings)
+    return price
+}
+
+
+
 
 
 
